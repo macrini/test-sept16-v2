@@ -1,0 +1,23 @@
+{
+    "name": "website-components-template",
+    "packageManager": "yarn@4.1.0",
+    "private": true,
+    "workspaces": [
+        "src/*",
+        "builder"
+    ],
+    "scripts": {
+        "serve": "cd builder && yarn run serve",
+        "watch:exports": "cd builder && yarn run watch_and_run 'yarn run-func preBuild.js generateExports'",
+        "watch": "cd builder && yarn run watch:tunnel",
+        "watch:doc": "cd builder && yarn run watch_and_run 'yarn run build:doc'",
+        "build:exports": "cd builder && yarn run-func preBuild.js generateExports",
+        "build": "cd builder && yarn run build",
+        "build:doc": "cd builder && yarn run build:doc",
+        "build:manifest": "cd builder && yarn run build:manifest"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
+}
